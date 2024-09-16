@@ -50,7 +50,6 @@ def NotifyFood(phone):
                 {
                     "action": "Food_yes",
                     "title": "Ja",
-                    "authenticationRequired": "1234"
                 }
             ]
         }
@@ -72,6 +71,29 @@ def NotifyWorkday(phone):
                     "title": "Dåligt",
                     "activationMode": "foreground",
                 }               
+            ]
+        }
+    }
+    sendData(data,phone)
+
+def NotifyGoodday(phone):
+    data = {
+        "title": "Goodday",
+        "message": "Hur har dagen varit socialt? ",
+        "data": {
+            "actions": [
+                {
+                    "action": "private_good",
+                    "title": "Bra",
+                },
+                {
+                    "action": "private_okay",
+                    "title": "Okej",
+                },
+                {
+                    "action": "private_bad",
+                    "title": "Dålig",
+                }                                 
             ]
         }
     }

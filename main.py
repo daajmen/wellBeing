@@ -19,16 +19,12 @@ async def run():
         runscript("11:00", NotifyFood, 'master'),
         runscript("16:00", NotifyFood, 'master'),
 
-        runscript("16:30", NotifyWorkday, 'master')
+        runscript("16:30", NotifyWorkday, 'master'),
+
+        runscript("21:00", NotifyGoodday, 'master')
 
 
     )
 
-
 asyncio.run(run())
-
-# Skicka fråga under morgonen 
-#NotifySleepWell('master')
-#NotifyFood('master')
-#NotifyWorkday('master')
 
